@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar navbar-inverse navbar-fixed-top">
+        <!-- Daha iyi mobil görüntü için marka ve aç/kapa gruplanıyor -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Navigasyonu aç/kapa</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Unity Wiki", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <!-- Aç/kapa için nav kısayollarını, formu ve diğer içeriği bir araya topla -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            </ul>
+        </div><!-- /.navbar-aç/kapa -->
+    </nav>	 
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3> Contact </h3>
+                        <ul>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Important Links </h3>
+                        <ul>
+                            <li> <a href="#"> Admission </a> </li>
+                            <li> <a href="#"> Academic </a> </li>
+                            <li> <a href="#"> Career </a> </li>
+                            <li> <a href="#"> Administration </a> </li>
+                            <li> <a href="#"> Notice </a> </li>
+                            <li> <a href="#"> Tender </a> </li>
+                            <li> <a href="login.php"> Teacher Login </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Location </h3>
+                        <ul>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                            <li> <a href="#"> Lorem Ipsum </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left"> Copyright © 2017 All rights reserved.</p>
+                <div class="pull-right">
+                    <ul class="nav nav-pills payments">
+                        <li><i class="fa fa-cc-visa"></i></li>
+                        <li><i class="fa fa-cc-mastercard"></i></li>
+                        <li><i class="fa fa-cc-amex"></i></li>
+                        <li><i class="fa fa-cc-paypal"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/.footer-bottom-->
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

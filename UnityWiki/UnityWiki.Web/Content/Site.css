@@ -1,0 +1,150 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.first-box {
+    padding: 10px;
+    background: #9C0;
+}
+
+.second-box {
+    padding: 10px;
+    background: #39F;
+}
+
+.third-box {
+    padding: 10px;
+    background: #F66;
+}
+
+.fourth-box {
+    padding: 10px;
+    background: #6CC;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: #21313F;
+    border-color: #fff;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: #fff;
+}
+
+.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar ul li:hover {
+    background-color: #FF8040;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+.footer {
+    background: #21313F;
+    height: auto;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
+}
+
+.footer h3 {
+    border-bottom: 1px solid #BAC1C8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+}
+
+.footer ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #F5F5F5;
+}
+
+.footer ul li a {
+    padding: 0 0 5px 0;
+    display: block;
+}
+
+.footer a {
+    color: #F5F5F5
+}
+
+.supportLi h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: normal;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+}
+
+.bg-gray {
+    background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+    box-shadow: 0 1px 0 #B4B3B3;
+}
+
+.footer-bottom {
+    background: #E3E3E3;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom p.pull-left {
+    padding-top: 6px;
+}
+
+.carousel-content {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+#text-carousel {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+.carousel-items-wrapper{
+    margin-left: 300px;
+}
