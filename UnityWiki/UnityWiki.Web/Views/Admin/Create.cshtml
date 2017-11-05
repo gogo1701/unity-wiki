@@ -1,0 +1,14 @@
+﻿@model UnityWiki.Web.Models.CreateArticleViewModel
+
+<h2>Admin Panel</h2>
+
+@using (Html.BeginForm("Create", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Description)
+    @Html.TextBoxFor(m => m.Description)
+
+    <input type="submit" value="Submit" />
+}

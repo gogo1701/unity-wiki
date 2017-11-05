@@ -1,46 +1,33 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model UnityWiki.Web.Models.HomeIndexViewModel
 
 <div class="latest-articles">
     <h1>Latest articles</h1>
-    <div id="text-carousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="row">
-            <div>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="carousel-content">
-                            <div class="carousel-items-wrapper">
-                                <p>Article 1</p>
-                            </div>
+    <div class="row">
+        @foreach (var article in Model.Articles)
+        {
+            <div class="col articles-single-article">
+                <a href="#/articles/">
+                    <div class="single-article-image-containter">
+                        <div class="single-article-category">
+                            Category
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-content">
-                            <div>
-                                <p>Article 2</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-content">
-                            <div>
-                                <p>Article 3</p>
-                            </div>
-                        </div>
+                        <img class="single-article-image" src="https://blogs.unity3d.com/wp-content/themes/unity/images/large.jpg">
                     </div>
 
-                </div>
+                    <div class="single-article-title" title="Google told to take action on hate videos as advertiser ratchets up pressure">
+                        @article.Title
+                    </div>
+
+                    <div class="single-article-author">
+                        AUTHOR Admin
+                    </div>
+
+                    <div class="single-article-content">
+                        @article.Description
+                    </div>
+                </a>
             </div>
-        </div>
-        <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#text-carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-
+        }
     </div>
 </div>
 

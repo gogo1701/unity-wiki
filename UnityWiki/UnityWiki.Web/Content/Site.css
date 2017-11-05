@@ -148,3 +148,96 @@ textarea {
 .carousel-items-wrapper{
     margin-left: 300px;
 }
+
+
+/*-----------------------------ARTICLES-----------------------------------------*/
+
+.articles-container {
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+.articles-single-article {
+    background-color: white;
+    box-shadow: 2px 2px black;
+    width: 230px;
+    height: 350px;
+    margin: 13px;
+}
+
+.single-article-image-containter {
+    z-index: 0;
+    width: 220px;
+    height: 150px;
+    margin: 5px 0px 5px 5px;
+    box-shadow: 0px 0px 1px 1px grey;
+    position: relative;
+}
+
+.single-article-category,
+.da-category {
+    font-family: "LeagueGothic", "Helvetica Neue", "Helvetica", "Sans Serif";
+    color: white;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+    background-color: #9a1d0d;
+    display: inline-block;
+    padding: 1px 2px 1px 3px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.single-article-image {
+    width: 100%;
+    height: 100%;
+}
+
+.single-article-title {
+    font-family: "LeagueGothic", "Helvetica Neue", "Helvetica", "Sans Serif";
+    color: #9a1d0d;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.single-article-author {
+    font-family: "LeagueGothic", "Helvetica Neue", "Helvetica", "Sans Serif";
+    color: #212121;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.single-article-date, .da-date
+{
+    font-family: "LeagueGothic", "Helvetica Neue", "Helvetica", "Sans Serif";
+    color: white;
+    text-shadow: 1px 1px 1px grey, -1px -1px 1px grey;
+    position: absolute;
+    font-size: 42px;
+    letter-spacing: 1px;
+    top: 20px;
+    right: 2px;
+}
+
+.single-article-content {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 13px;
+    color: #7a7575;
+    text-overflow: clip;
+    border-top: 1px dotted #a6a6a6;
+    height: calc( 100% - 251px);
+    overflow: hidden;
+    padding: 10px 10px 0px 15px;
+}
