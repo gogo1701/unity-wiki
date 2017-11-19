@@ -4,11 +4,67 @@
 
 @using (Html.BeginForm("Create", "Admin", FormMethod.Post))
 {
-    @Html.LabelFor(m => m.Title)
-    @Html.TextBoxFor(m => m.Title)
-
-    @Html.LabelFor(m => m.Description)
-    @Html.TextBoxFor(m => m.Description)
-
-    <input type="submit" value="Submit" />
+    <div class="container">
+        <div class="row">
+            <form role="form" id="create-article-form" class="contact-form">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Title" autocomplete="off" id="Title" placeholder="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Category" autocomplete="off" id="Category" placeholder="Category">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control textarea" rows="3" name="Description" id="Description" placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="article-container" class="tags"></div>
+                    <div id="add-tag">
+                        <input id="tag-name" type="text" />
+                        <input class="btn btn-success" id="create-tag" type="button" value="Add Tag" />
+                    </div>
+                    <div class="col-md-1">
+                        <input id="tags" name="Tags" type="text" hidden />
+                        <button type="submit" class="btn main-btn pull-right">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 }
+<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#create-tag").on("click", function () {
+            console.log("Click");
+            var tagName = $("#tag-name").val();
+            console.log(tagName);
+            var tag = $("<a>");
+            tag.text(tagName);
+
+            $("#article-container").append(tag);
+
+            var val = $("#tags").val();
+
+            if (val == null || val == undefined || val == "") {
+                val += tagName;
+            }
+            else {
+                val += "," + tagName;
+            }
+            
+            $("#tags").val(val);
+        });
+    });
+</script>

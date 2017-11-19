@@ -32,7 +32,9 @@ namespace UnityWiki.Web.Controllers
                 Id = Guid.NewGuid(),
                 DateCreated = DateTime.Now,
                 Title = viewModel.Title,
-                Description = viewModel.Description
+                Description = viewModel.Description,
+                Category = viewModel.Category,
+                Tags = viewModel.Tags
             };
 
             this.context.Set<Article>().Add(article);

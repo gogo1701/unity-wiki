@@ -1,0 +1,35 @@
+﻿@model UnityWiki.Web.Models.DetailArticleViewModel
+
+<div class="detailed-article-container">
+    <div class="row no-gutters">
+        <div class="col-xs-6 da-details">
+            <div class="da-image-container">
+
+                <div class="da-category">
+                    @Model.Category
+                </div>
+                <img class="da-image" src="https://blogs.unity3d.com/wp-content/themes/unity/images/large.jpg">
+            </div>
+
+            <div class="da-tags-container">
+                <h3>TAGS</h3>
+                @foreach (var tag in Model.Tags)
+                {
+                    <span>@tag</span>
+                }
+            </div>
+        </div>
+
+        <div class="col-xs-6 da-content-container">
+            <h1>@Model.Title</h1>
+
+            <div class="da-author">
+                @Model.DateCreated
+            </div>
+
+            <div class="da-content">
+                @Model.Description
+            </div>
+        </div>
+    </div>
+</div>

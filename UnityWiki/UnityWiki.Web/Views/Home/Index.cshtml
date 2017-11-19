@@ -5,11 +5,11 @@
     <div class="row">
         @foreach (var article in Model.Articles)
         {
-            <div class="col articles-single-article">
-                <a href="#/articles/">
+            <div class="col-xs-2 articles-single-article">
+                <a href="/Article/Detail/@article.Id">
                     <div class="single-article-image-containter">
                         <div class="single-article-category">
-                            Category
+                            @article.Category
                         </div>
                         <img class="single-article-image" src="https://blogs.unity3d.com/wp-content/themes/unity/images/large.jpg">
                     </div>
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="single-article-author">
-                        AUTHOR Admin
+                        @article.DateCreated
                     </div>
 
                     <div class="single-article-content">
