@@ -13,7 +13,7 @@ namespace UnityWeb.Data
 {
     public class UnityWikiDbContext : IdentityDbContext<User>, IUnityWikiDbContext
     {
-        public UnityWikiDbContext() : base("DefaultConnection", throwIfV1Schema: false)
+        public UnityWikiDbContext() : base("UnityWikiLocal", throwIfV1Schema: false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<UnityWikiDbContext, Configuration>());
         }
