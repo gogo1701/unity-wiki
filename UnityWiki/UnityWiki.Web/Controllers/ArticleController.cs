@@ -21,7 +21,17 @@ namespace UnityWiki.Web.Controllers
         public ActionResult Detail(Guid id)
         {
             var article = this.context.Set<Article>().Where(a => a.Id == id).FirstOrDefault();
-            var tags = article.Tags.Split(',');
+            string[] tags;
+
+            if (article.Tags != null)
+            {
+                tags = article.Tags.Split(',');
+            }
+            else
+            {
+                tags = new string[0];
+            }
+            
 
             var viewModel = new DetailArticleViewModel()
             {
@@ -31,6 +41,18 @@ namespace UnityWiki.Web.Controllers
                 DateCreated = article.DateCreated,
                 Description = article.Description
             };
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public ActionResult SearchResult(string title)
+        {
+            var articles = this.context.Set<Article>().ToList().Where(a => a.Title.ToLower().Contains(title.ToLower())).ToList();
+
+            var viewModel = new HomeIndexViewModel();
+
+            viewModel.Articles = articles;
 
             return View(viewModel);
         }

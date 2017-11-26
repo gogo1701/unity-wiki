@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityWeb.Data.Contracts;
+using UnityWeb.Data.Migrations;
 using UnityWiki.DataModels;
 
 namespace UnityWeb.Data
@@ -14,7 +15,7 @@ namespace UnityWeb.Data
     {
         public UnityWikiDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<UnityWikiDbContext, Configuration>());
         }
 
         public IDbSet<Article> Articles { get; set; }

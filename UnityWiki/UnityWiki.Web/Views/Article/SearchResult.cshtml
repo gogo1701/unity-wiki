@@ -1,0 +1,33 @@
+﻿@model UnityWiki.Web.Models.HomeIndexViewModel
+
+<div class="latest-articles">
+    <h1>Search results</h1>
+    <div class="row">
+        @foreach (var article in Model.Articles)
+        {
+            <div class="col-xs-2 articles-single-article">
+                <a href="/Article/Detail/@article.Id">
+                    <div class="single-article-image-containter">
+                        <div class="single-article-category">
+                            @article.Category
+                        </div>
+                        <img class="single-article-image" src="https://blogs.unity3d.com/wp-content/themes/unity/images/large.jpg">
+                    </div>
+
+                    <div class="single-article-title" title="Google told to take action on hate videos as advertiser ratchets up pressure">
+                        @article.Title
+                    </div>
+
+                    <div class="single-article-author">
+                        @article.DateCreated
+                    </div>
+
+                    <div class="single-article-content">
+                        @article.Description
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+

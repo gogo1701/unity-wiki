@@ -1,5 +1,17 @@
 ﻿@model UnityWiki.Web.Models.HomeIndexViewModel
 
+@using (Html.BeginForm("SearchResult", "Article", FormMethod.Get))
+{
+    <div id="search-container" class="container">
+        <div class="row">
+            <div class="search">
+                <input name="title" type="text" class="form-control input-lg" maxlength="64" placeholder="Search" />
+                <button type="submit" class="btn btn-primary btn-lg">Search</button>
+            </div>
+        </div>
+    </div>
+}
+
 <div class="latest-articles">
     <h1>Latest articles</h1>
     <div class="row">
@@ -14,7 +26,7 @@
                         <img class="single-article-image" src="https://blogs.unity3d.com/wp-content/themes/unity/images/large.jpg">
                     </div>
 
-                    <div class="single-article-title" title="Google told to take action on hate videos as advertiser ratchets up pressure">
+                    <div class="single-article-title" title="@article.Title">
                         @article.Title
                     </div>
 

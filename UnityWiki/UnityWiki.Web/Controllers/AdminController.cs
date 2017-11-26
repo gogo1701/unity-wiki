@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using UnityWeb.Data.Contracts;
 using UnityWiki.DataModels;
+using UnityWiki.Web.Attributes;
+using UnityWiki.Web.Common;
 using UnityWiki.Web.Models;
 
 namespace UnityWiki.Web.Controllers
 {
+    [CustomAuthorize(Roles = UserRoles.Admin)]
     public class AdminController : Controller
     {
         private IUnityWikiDbContext context;
